@@ -7,7 +7,7 @@ import java.time.LocalDateTime
 class TestSolarPanel {
 
     @Test
-    fun houseWithRealSolarPanelReadsFromSensor() {
+    fun realSolarPanelReadsFromSensor() {
         val startDateTime = LocalDateTime.of(2019, 2, 6, 0, 0)
         val endDateTime = startDateTime.plusHours(1L)
         val solarPanel = SolarPanel(startDateTime)

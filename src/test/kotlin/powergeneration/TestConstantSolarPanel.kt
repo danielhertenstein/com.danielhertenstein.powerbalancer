@@ -19,7 +19,7 @@ class TestConstantSolarPanel {
     }
 
     @Test
-    fun houseWithConstantSolarPanelReturnsItsConstant() {
+    fun constantSolarPanelReturnsItsConstant() {
         val powerGenerated = constantSolarPanel.powerGeneratedForDateTime(endDateTime)
         assertEquals(powerGenerated, hourlyPowerGenerationRate)
     }
