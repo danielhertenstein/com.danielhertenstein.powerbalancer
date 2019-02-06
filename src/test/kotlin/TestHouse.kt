@@ -1,7 +1,7 @@
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
 import powergeneration.ConstantSolarPanel
-import powergeneration.SolarPanel
+import powergeneration.RealSolarPanel
 import java.time.LocalDateTime
 
 class TestHouse {
@@ -13,8 +13,8 @@ class TestHouse {
 
         val hourlyPowerGenerationRate = 2.0
         val constantSolarPanel = ConstantSolarPanel(startDateTime, hourlyPowerGenerationRate)
-        val solarPanel = SolarPanel(startDateTime)
-        val house = House(solarPanel)
+        val realSolarPanel = RealSolarPanel(startDateTime)
+        val house = House(realSolarPanel)
 
         var powerGenerated = house.getPowerGeneratedForDateTime(endDateTime)
         assertEquals(powerGenerated, 999.9)
